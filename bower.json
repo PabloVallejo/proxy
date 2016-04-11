@@ -1,0 +1,22 @@
+{
+  "name": "proxy",
+  "version": "0.0.1",
+  "homepage": "https://github.com/PabloVallejo/proxy",
+  "authors": [
+    "Pablo Vallejo <pabloninety@gmail.com>"
+  ],
+  "description": "Basic web proxy",
+  "keywords": [
+    "Proxy",
+    "Server"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}

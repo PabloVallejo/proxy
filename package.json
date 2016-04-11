@@ -1,0 +1,22 @@
+{
+  "name": "proxy",
+  "version": "0.0.1",
+  "description": "Basic web proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "proxy",
+    "express",
+    "js"
+  ],
+  "author": "Pablo Vallejo <pabloninety@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
