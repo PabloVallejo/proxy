@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
+var http = require('http');
 
 // Config.
 app.set('views', 'public/views');
@@ -12,6 +13,31 @@ app.use(express.static('public'));
 // Routes.
 app.get('/', function(req, res) {
     res.render('index');
+});
+
+// Users.
+app.get('/users', function(req, res) {
+
+    // Sandbox URL with users list.
+    var url = 'http://proxy.getsandbox.com/users';
+
+    // Make request.
+    http.get(url, function(response) {
+        var body = '';
+
+        // Build body.
+        response.on('data', function(chunk) {
+            body += chunk;
+        });
+
+        // Send response.
+        response.on('end', function() {
+            var users = JSON.parse(body);
+            return res.json(users);
+        });
+    }).on('error', function(e){
+          res.json({'message': 'Could not reach Sandbox'});
+    });
 });
 
 // Respond to any GET request.
